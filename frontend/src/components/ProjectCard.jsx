@@ -15,7 +15,7 @@ function ProjectCard({ project, onUpdate, onDelete }) {
     const fetchTasks = async () => {
       try {
         const res = await fetch(
-          `https://tasktrackerbackend.vercel.app/api/tasks/project/${project._id}`,
+          `https://task-tracker-backend-jur5.onrender.com/api/tasks/project/${project._id}`,
           {
             headers: {
               Authorization: `Bearer ${token}`,
@@ -38,7 +38,7 @@ function ProjectCard({ project, onUpdate, onDelete }) {
 
   const handleCreateTask = async (taskData) => {
     try {
-      const res = await fetch("https://tasktrackerbackend.vercel.app/api/tasks", {
+      const res = await fetch("https://task-tracker-backend-jur5.onrender.com/api/tasks", {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
@@ -67,7 +67,7 @@ function ProjectCard({ project, onUpdate, onDelete }) {
 
   const updateTask = async (taskId, updates) => {
     try {
-      const res = await fetch(`https://tasktrackerbackend.vercel.app/api/tasks/${taskId}`, {
+      const res = await fetch(`https://task-tracker-backend-jur5.onrender.com/api/tasks/${taskId}`, {
         method: "PATCH",
         headers: {
           "Content-Type": "application/json",
@@ -93,7 +93,7 @@ function ProjectCard({ project, onUpdate, onDelete }) {
 
   const deleteTask = async (taskId) => {
     try {
-      const res = await fetch(`https://tasktrackerbackend.vercel.app/api/tasks/${taskId}`, {
+      const res = await fetch(`https://task-tracker-backend-jur5.onrender.com/api/tasks/${taskId}`, {
         method: "DELETE",
         headers: {
           Authorization: `Bearer ${token}`,

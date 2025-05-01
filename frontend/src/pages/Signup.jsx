@@ -26,7 +26,7 @@ function Signup() {
 
     try {
       await axios
-        .post("https://tasktrackerbackend.vercel.app/api/auth/signup", formData)
+        .post("https://task-tracker-backend-jur5.onrender.com/api/auth/signup", formData)
         .then((response) => {
           console.log("DEBUG: Data received from server:", response.data);
 
