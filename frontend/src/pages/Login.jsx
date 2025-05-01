@@ -24,7 +24,7 @@ function Login() {
     e.preventDefault();
 
     try {
-      await axios.post("http://localhost:5000/api/auth/login",formData).then((res)=>{
+      await axios.post("https://tasktrackerbackend.vercel.app/api/auth/login",formData).then((res)=>{
         console.log("data received", res.data);
         if (res.data.message === "Login Successfully") {
           alert("Login Successfully");

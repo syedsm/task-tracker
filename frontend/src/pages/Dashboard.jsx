@@ -12,7 +12,7 @@ function Dashboard() {
   const handleCreateProject = async (newProject) => {
     try {
       const response = await fetch(
-        "http://localhost:5000/api/projects/create",
+        "https://tasktrackerbackend.vercel.app/api/projects/create",
         {
           method: "POST",
           headers: {
@@ -38,7 +38,7 @@ function Dashboard() {
   useEffect(() => {
     const fetchProjects = async () => {
       try {
-        const res = await fetch("http://localhost:5000/api/projects/fetch", {
+        const res = await fetch("https://tasktrackerbackend.vercel.app/api/projects/fetch", {
           method: "GET",
           headers: {
             Authorization: `Bearer ${token}`,
@@ -61,7 +61,7 @@ function Dashboard() {
     // console.log("Attempting to delete project with ID:", projectId); // Debugging step 1
     try {
       const res = await fetch(
-        `http://localhost:5000/api/projects/${projectId}`,
+        `https://tasktrackerbackend.vercel.app/api/projects/${projectId}`,
         {
           method: "DELETE",
           headers: {
