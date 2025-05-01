@@ -12,7 +12,16 @@ dotenv.config();
 const app = express();
 
 // Middleware
-app.use(cors());
+app.use(cors({
+  origin: '*', // Allow all origins
+  methods: ['GET', 'POST', 'PUT', 'DELETE', 'PATCH', 'OPTIONS'], // Allow all common HTTP methods
+  allowedHeaders: ['Content-Type', 'Authorization'], // Allow common headers
+}));
+
+// Sample route
+app.get('/', (req, res) => {
+  res.send('CORS is fully open!');
+});
 app.use(express.json());
 
 // Routes
