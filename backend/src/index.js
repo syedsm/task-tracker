@@ -14,12 +14,12 @@ const app = express();
 // Middleware
 app.use(cors({
   origin: '*', // Allow all origins
-  methods: ['GET', 'POST', 'PUT', 'DELETE', 'PATCH', 'OPTIONS'], // Allow all common HTTP methods
-  allowedHeaders: ['Content-Type', 'Authorization'], // Allow common headers
+  methods: ['GET', 'POST', 'PUT', 'DELETE', 'PATCH', 'OPTIONS'],
+  allowedHeaders: ['Content-Type', 'Authorization'],
 }));
 
 // Sample route
-app.get('/', (req, res) => {
+app.get('/test', (req, res) => {
   res.send('CORS is fully open!');
 });
 app.use(express.json());
